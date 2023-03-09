@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 기본</title>
+    <style>
+        /* 
+        스타일 지정의 기본 문법
+        선택자 { 스타일속성1:값; 스타일속성2:값 } 
+        선택자 : 스타일을 부여할 대상(element / tag)
+        */
+        * { margin: 0; padding: 0; } /* 전체 선택자 : * */
+        h2, p { border-bottom:3px dotted deeppink; }
+        #con1 {color:blueviolet; }
+        p {color: darkgreen!important; } /* 우선 순위 무시 : '속성'!important; (웹 표준 상 사용하지 않음) */
+    </style>
+</head>
+<body>
+    <div>
+        <h2>제목</h2>
+        <p id="con1" class="para">tyler</p>
+        <p id="con2" class="para">jenny</p>
+        <p id="con3" class="para">rabbit</p>
+    </div>
+</body>
+</html>
