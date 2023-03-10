@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 구조 선택자</title>
+    <style>
+        /* 형제 요소 */
+        h2 + ul {text-align: center; }  /* element1+element2 elt1의 인접 요소인 elt2 선택자 */
+        h2 ~ ul {background-color: blue; margin-right: 200px; }    /* element1~element elt1의 아래 형제 요소 선택자 */
+        .con {border: 2px solid yellow; }
+        li:nth-child(1) { font-style: italic; margin-left: 5px; }
+        /* 첫번째의 li에만 적용 / 만약 ul 자식으로 a 태그가 첫번째에 위치해 있으면 두번째에 위치한 li에는 적용X */
+        p:empty::before, div:empty::before { content:"자식 또는 내용이 없는 요소"; }
+        ul > li {border:3px solid red; width:300px; height:200px; }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <h2 title="요소 안의 목록1">div 요소 안의 목록 요소</h2>
+        <ul class="lst1">
+            <a href="">링크</a>
+            <li title="내용이에요1">내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+        <ul class="lst2">
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+            <li>내용4</li>
+        </ul>
+    </div>
+    <div>
+        <h2>class con에 포함되지 않음</h2>
+    </div>
+    <article class="con">
+        <h2>article 요소 안의 목록</h2>
+        <ul>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ul>
+        <ol>
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+            <li>목록4</li>
+            <li>목록5</li>
+        </ol>
+    </article>
+    <div class="con" title="자식이 없는 요소"></div>
+    <div class="con">
+        <p title="0"></p>
+    </div>    <p title="내용이 없는 요소"></p>
+    </div>
+</body>
+</html>
