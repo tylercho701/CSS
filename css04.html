@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일 연습 - 링크 선택자</title>
+    <style>
+        a { text-align: center; }
+        a:link { color: blueviolet;}
+        a:visited { color : yellow}
+        a:hover { background-color:black; color: darkcyan;}
+        a:active { background-color: gray; color: crimson;}
+        a::before {content: "오?";}
+        a::after {content: "-"attr(href);}
+
+        p::first-letter {font-size: 50px; }
+        p::first-line {color : blue; font: bold;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="https://www.google.com" title="구글">링크1</a><br><br>
+        <a href="https://www.naver.com" title="네이버">링크2</a><br><br>
+        <a href="https://www.tjoeun.co.kr" title="더조은">링크3</a><br><br>
+        <a href="https://www.daum.net" title="다음">링크4</a><br><br>
+        <a href="링크가 없는 a요소">링크5</a><br><br>
+    </nav>
+    <div>
+        <p>가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+            가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하
+        </p>
+        <p>ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+            ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ
+        </p>
+    </div>
+    <hr>
+    <input type="checkbox" id="ck1">
+    <label for="ck1" id="btn1"></label>
+    <div id="box">여기는 펼침창</div>
+    <div>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+    </div>
+    <section id="sec1">
+        <h2>섹션 제목1</h2>
+    </section>
+    <section id="sec2">
+        <h2>섹션 제목2</h2>
+    </section>
+    <section id="sec3">
+        <h2>섹션 제목3</h2>
+    </section>
+</body>
+</html>
