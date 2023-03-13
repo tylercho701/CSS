@@ -8,12 +8,29 @@
     <style>
         /* 형제 요소 */
         h2 + ul {text-align: center; }  /* element1+element2 elt1의 인접 요소인 elt2 선택자 */
-        h2 ~ ul {background-color: blue; margin-right: 200px; }    /* element1~element elt1의 아래 형제 요소 선택자 */
-        .con {border: 2px solid yellow; }
-        li:nth-child(1) { font-style: italic; margin-left: 5px; }
+        ul+ul { list-style: circle; } 
+        h2~ul { border:3px solid gold; } /* 인접(nextAll) 요소들 선택자*/
+        .con li { text-decoration:underline; } /* 조상 후손 */
+        .con > ul > li { border-bottom:2px solid red; } /* 부모 > 자식 */
+
+
+        /* 순서 위치 선택자 */
+        li:first-child { color:silver; } /* 첫 번째 */
+        li:last-child { color:yellow; } /* 마지막 요소 */
+        li:nth-child(2) { color:purple; } /* 2번째 요소 */
+        li:only-child { font-style: italic; color:brown; } /* 독자 요소 > 부로 태그로부터 하나의 자식태그가 있는 경우에만 적용*/
+        li:nth-child(2n) { background-color:green; } /* 짝수 번째 */
+        li:nth-child(2n+1) { background-color:deeppink; } /* 홀수 번째 */
+
+
         /* 첫번째의 li에만 적용 / 만약 ul 자식으로 a 태그가 첫번째에 위치해 있으면 두번째에 위치한 li에는 적용X */
         p:empty::before, div:empty::before { content:"자식 또는 내용이 없는 요소"; }
         ul > li {border:3px solid red; width:300px; height:200px; }
+
+        
+        li:first-of-type { padding-left:120px; } /* 순서가 중요함 */
+        /* last-of-type, nth-of-type, only-of-type 등 도 있음 */
+        p:empty::before, div:empty::before { content:"자식 또는 내용이 없는 요소"; }
     </style>
 </head>
 <body>

@@ -7,15 +7,28 @@
     <title>스타일 연습 - 링크 선택자</title>
     <style>
         a { text-align: center; }
+        /* 링크 선택자 */
         a:link { color: blueviolet;}
         a:visited { color : yellow}
         a:hover { background-color:black; color: darkcyan;}
         a:active { background-color: gray; color: crimson;}
-        a::before {content: "오?";}
-        a::after {content: "-"attr(href);}
 
+        /* 전/후 선택자 */
+        nav a::before {content: "오?";}
+        a::after {content: "-"attr(href);}
+        
+        /* 첫글자/첫줄 선택자 */
         p::first-letter {font-size: 50px; }
         p::first-line {color : blue; font: bold;}
+
+        /* input, label을 활용한 대화 상자 숨김 */
+        #btn1 { dispalay:block; width: 300px; height: 40px; }
+        #ck1:checked + #btn1::before {content:"펼침"; }
+        #ck1:not(:checked) + #btn1::before {content: "접힘"; }
+        #box {width: 500px; height: 300px; border: 3px solid #333;
+            background-color: gold; transition: 0.5s; }
+        #ck1:checked ~ #box { visibility: visible; opacity: 1; }
+        #ck1:not(:checked) ~ #box { visibility: hidden; opacity: 0; }
     </style>
 </head>
 <body>
@@ -50,9 +63,9 @@
     <label for="ck1" id="btn1"></label>
     <div id="box">여기는 펼침창</div>
     <div>
-        <li>메뉴1</li>
-        <li>메뉴2</li>
-        <li>메뉴3</li>
+        <li><a href="#sec1">메뉴1</a></li>
+        <li><a href="#sec2">메뉴2</a></li>
+        <li><a href="#sec3">메뉴3</a></li>
     </div>
     <section id="sec1">
         <h2>섹션 제목1</h2>
