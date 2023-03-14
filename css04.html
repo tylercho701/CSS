@@ -22,13 +22,18 @@
         p::first-line {color : blue; font: bold;}
 
         /* input, label을 활용한 대화 상자 숨김 */
-        #btn1 { dispalay:block; width: 300px; height: 40px; }
+        #btn1 { display:block; width: 300px; height: 40px; }
         #ck1:checked + #btn1::before {content:"펼침"; }
         #ck1:not(:checked) + #btn1::before {content: "접힘"; }
         #box {width: 500px; height: 300px; border: 3px solid #333;
             background-color: gold; transition: 0.5s; }
         #ck1:checked ~ #box { visibility: visible; opacity: 1; }
         #ck1:not(:checked) ~ #box { visibility: hidden; opacity: 0; }
+
+        section { border: weight:400px; height:300px; background-color: brown; color: aliceblue;}
+        section :target { display: block;}
+        /* http://127.0.0.1:5500/css04.html#sec3 */
+        
     </style>
 </head>
 <body>
